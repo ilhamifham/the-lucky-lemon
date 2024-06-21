@@ -1,14 +1,20 @@
-import './App.css';
 import Header from './components/Header';
-import Main from './components/Main';
+import Hero from './components/Hero';
+import Menu from './components/Menu';
+import Reservation from './components/Reservation';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
     <>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <Header />
+      <main>
+        <Hero />
+        <Menu />
+        <Reservation />
+      </main>
+      <Footer />
     </>
   );
 }
