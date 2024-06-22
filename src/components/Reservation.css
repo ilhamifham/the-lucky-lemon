@@ -52,3 +52,9 @@
 .reservation_form button {
     padding: 0.75rem 1rem;
 }
+
+.error {
+    color: red;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
