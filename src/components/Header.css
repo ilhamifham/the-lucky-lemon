@@ -2,9 +2,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--highlight-color-1);
+    background-color: white;
     z-index: 100;
-    border-bottom: 1px solid var(--primary-color-1);
 }
 
 .header {
@@ -54,6 +53,8 @@
 .header_navigation_link {
     display: block;
     color: var(--highlight-color-2);
+    font-weight: 500;
+    font-size: 1.125rem;
 }
 
 @media screen and (min-width: 668px) {

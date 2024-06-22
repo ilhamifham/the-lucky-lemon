@@ -19,7 +19,7 @@ function Header() {
                 <nav className={toggleMenu ? "header_navigation collapse" : "header_navigation"}>
                     <ul>
                         <li>
-                            <a className="header_navigation_link" onClick={toggle} href="#menu">Menu</a>
+                            <a className="header_navigation_link" onClick={toggle} href="#menu">Specials</a>
                         </li>
                         <li>
                             <a className="header_navigation_link" onClick={toggle} href="#reservation">Reservation</a>
@@ -29,9 +29,6 @@ function Header() {
                         </li>
                         <li>
                             <a className="header_navigation_link" onClick={toggle} href="#contact">Contact</a>
-                        </li>
-                        <li>
-                            <a className="link-button" href="/">Log In</a>
                         </li>
                     </ul>
                 </nav>

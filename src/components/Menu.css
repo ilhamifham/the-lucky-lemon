@@ -1,13 +1,11 @@
 .menu {
     max-width: 668px;
     margin: 0 auto;
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 5.5rem 1rem 0 1rem;
 }
 
-.menu_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu h2 {
+    text-align: center;
 }
 
 .menu_card {
@@ -64,6 +62,11 @@
 
 @media screen and (min-width: 924px) {
     .menu {
-        max-width: 1200px;
+        max-width: 814px;
+    }
+
+    .menu_card {
+        overflow-x: auto;
+        justify-content: center;
     }
 }
