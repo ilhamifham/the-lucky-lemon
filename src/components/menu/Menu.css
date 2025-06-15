@@ -1,0 +1,32 @@
+.section__menu {
+    padding: 1.5rem 1rem 2rem;
+}
+
+.section__menu h2 {
+    margin-bottom: 2rem;
+}
+
+.section__menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .section__menu {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 64.4375rem) {
+    .section__menu {
+        padding-top: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 65.25rem) {
+    .section__menu {
+        padding-top: 4.45rem;
+    }
+}

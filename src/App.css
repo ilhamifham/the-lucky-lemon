@@ -1,0 +1,36 @@
+@import url("./styles/resets.css");
+@import url("./styles/fonts.css");
+@import url("./styles/variables.css");
+
+/* ====== Global ====== */
+html {
+    font-family: var(--karla);
+}
+
+body {
+    background-color: var(--highlight-1);
+    color: var(--highlight-2);
+    min-width: 20rem;
+}
+
+/* ====== Utilities ====== */
+section>div {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.button__ui {
+    background-color: var(--primary-2);
+    color: var(--dark);
+    font-family: var(--karla-md);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-out);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2.75rem;
+    font-family: var(--karla-b);
+    letter-spacing: var(--letter-spacing);
+}

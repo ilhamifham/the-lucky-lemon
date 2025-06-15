@@ -1,0 +1,24 @@
+.section__hero picture {
+    margin-top: 2rem;
+}
+
+.section__hero img {
+    border-radius: var(--radius-out);
+    box-shadow: var(--shadow);
+    border: var(--border);
+}
+
+@media screen and (min-width: 48rem) {
+    .section__hero picture {
+        margin-top: 0;
+        margin-left: 2rem;
+        position: relative;
+        flex: 1;
+    }
+
+    .section__hero img {
+        position: absolute;
+        height: 28.125rem;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,32 @@
+header {
+    padding: 1rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background-color: var(--highlight-1);
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 100px 60px 60px 100px;
+    max-width: 75rem;
+    min-width: 18rem;
+    box-shadow: var(--shadow);
+    border: var(--border);
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+}
+
+header .link__logo {
+    margin-right: auto;
+    border-radius: 100px;
+}
+
+@media screen and (min-width: 48rem) {
+    header {
+        left: 2rem;
+        right: 2rem;
+    }
+}

@@ -1,0 +1,25 @@
+.section__menu li .button__ui {
+    width: 100%;
+    border-radius: var(--radius-in);
+}
+
+.section__menu li>div>div:last-child {
+    display: flex;
+    width: 100%;
+}
+
+.section__menu li>div>div:last-child button {
+    border-radius: var(--radius-in);
+}
+
+.section__menu li>div>div:last-child div {
+    margin: 0 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-family: var(--karla-md);
+    background-color: var(--dark);
+    border-radius: var(--radius-in);
+}

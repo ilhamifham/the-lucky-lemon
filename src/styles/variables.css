@@ -1,0 +1,31 @@
+:root {
+    --primary-1: #495E57;
+    --primary-2: #F4CE14;
+    --highlight-1: #EDEFEE;
+    --highlight-2: #333333;
+    --light: #EDEFEE;
+    --dark: #333333;
+
+    --markazi: "Markazi";
+    --markazi-md: "Markazi Medium";
+    --karla: "Karla";
+    --karla-md: "Karla Medium";
+    --karla-b: "Karla Bold";
+    --karla-eb: "Karla Extra Bold";
+
+    --radius-out: 22px;
+    --radius-in: 10px;
+
+    --shadow: 0px 0px 20px 10px #00000010;
+
+    --border: 1px solid #00000020;
+
+    --letter-spacing: -0.03125em;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --highlight-1: #333333;
+        --highlight-2: #EDEFEE;
+    }
+}

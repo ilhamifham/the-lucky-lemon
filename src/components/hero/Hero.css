@@ -1,0 +1,50 @@
+.section__hero {
+    padding: 7rem 1rem 2rem;
+    background-color: var(--primary-1);
+    color: var(--light);
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: var(--karla-b);
+    color: var(--primary-2);
+    letter-spacing: var(--letter-spacing);
+}
+
+h1+div {
+    font-size: 2.5rem;
+    font-family: var(--karla-md);
+    margin-bottom: 0.5rem;
+    letter-spacing: var(--letter-spacing);
+}
+
+.section__hero p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .section__hero {
+        padding: 7.5rem 2rem 2rem;
+    }
+
+    .section__hero>div {
+        display: flex;
+    }
+
+    .section__hero>div>div {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 64.4375rem) {
+    .section__hero {
+        padding-bottom: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 65.25rem) {
+    .section__hero {
+        padding-bottom: 5.25rem;
+    }
+}

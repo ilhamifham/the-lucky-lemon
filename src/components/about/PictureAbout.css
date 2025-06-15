@@ -1,0 +1,28 @@
+.section__about img {
+    border-radius: var(--radius-out);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: var(--border);
+}
+
+.section__about div>div:last-child picture:first-child {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 1;
+}
+
+.section__about div>div:last-child picture:last-child {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+@media screen and (min-width: 48rem) {
+    .section__about img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
