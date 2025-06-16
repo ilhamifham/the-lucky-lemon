@@ -7,7 +7,7 @@ header {
     background-color: var(--highlight-1);
     margin: 0 auto;
     z-index: 1;
-    border-radius: 100px 60px 60px 100px;
+    border-radius: 100px 72px 72px 100px;
     max-width: 75rem;
     min-width: 18rem;
     box-shadow: var(--shadow);
