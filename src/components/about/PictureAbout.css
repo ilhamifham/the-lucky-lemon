@@ -9,15 +9,14 @@
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
-    grid-row-end: 3;
-    z-index: 1;
+    grid-row-end: 5;
 }
 
 .section__about div>div:last-child picture:last-child {
     grid-column-start: 4;
     grid-column-end: 8;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 6;
 }
 
 @media screen and (min-width: 48rem) {
