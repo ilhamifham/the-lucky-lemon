@@ -31,7 +31,8 @@
 }
 
 .section__menu li p {
-    margin: 1rem 0;
     overflow: hidden;
     max-height: 3rem;
+    margin-top: 0.6875rem;
+    margin-bottom: 0.875rem;
 }

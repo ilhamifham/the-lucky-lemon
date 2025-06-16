@@ -1,11 +1,10 @@
 .section__about {
-    padding: 1.5rem 1rem 2rem;
-    background-color: var(--primary-1);
+    padding: 1.6875rem 1rem 2rem;
     color: var(--light);
 }
 
 .section__about h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .section__about p {
@@ -13,7 +12,7 @@
 }
 
 .section__about div>div:last-child {
-    margin-top: 2rem;
+    margin-top: 1.5625rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
