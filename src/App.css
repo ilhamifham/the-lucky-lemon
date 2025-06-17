@@ -34,3 +34,12 @@ h2 {
     font-family: var(--karla-b);
     letter-spacing: var(--letter-spacing);
 }
+
+.card__ui {
+    max-width: 17.25rem;
+    border-radius: var(--radius-out);
+    box-shadow: var(--shadow);
+    border: var(--border);
+    background-color: var(--primary-1);
+    color: var(--light);
+}

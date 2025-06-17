@@ -9,10 +9,11 @@
 
 .section__about p {
     font-size: 1.125rem;
+    margin-bottom: 1.5625rem;
 }
 
 .section__about div>div:last-child {
-    margin-top: 1.5625rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -29,6 +30,7 @@
 
     .section__about>div div {
         flex: 1;
+        margin-top: -0.3125rem;
     }
 
     .section__about div>div:last-child {

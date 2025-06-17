@@ -1,19 +1,13 @@
 .section__testimonial li {
-    background-color: var(--primary-1);
-    color: var(--light);
     padding: 1rem 1rem 0.8125rem;
-    max-width: 17.25rem;
-    border-radius: var(--radius-out);
-    box-shadow: var(--shadow);
-    border: var(--border);
 }
 
 .section__testimonial li>div {
     display: flex;
     align-items: center;
     margin-bottom: 0.6875rem;
-    font-size: 1.125rem;
-    font-family: var(--karla-b);
+    font-size: 1.1875rem;
+    font-family: var(--karla-md);
 }
 
 .section__testimonial li>p {
@@ -25,10 +19,14 @@
     width: 5rem;
     height: 5rem;
     margin-right: 1rem;
+}
+
+.section__testimonial li img {
+    border: var(--border);
+    box-shadow: var(--shadow);
     border-radius: var(--radius-in);
-    overflow: hidden;
 }
 
 .section__testimonial li>div>div div:first-child {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.125rem;
 }

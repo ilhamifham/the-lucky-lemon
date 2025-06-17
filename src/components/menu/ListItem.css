@@ -1,26 +1,21 @@
 .section__menu li {
-    max-width: 17.25rem;
-    border-radius: var(--radius-out);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    border: var(--border);
 }
 
 .section__menu li h3 {
     letter-spacing: var(--letter-spacing);
+    margin-right: 1rem;
 }
 
 .section__menu li>div {
     padding: 1rem;
-    background-color: var(--primary-1);
-    color: var(--light);
 }
 
 .section__menu li>div>div:first-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.1875rem;
     font-family: var(--karla-md);
 }
 
@@ -32,7 +27,7 @@
 
 .section__menu li p {
     overflow: hidden;
-    max-height: 3rem;
+    max-height: 6rem;
     margin-top: 0.6875rem;
     margin-bottom: 0.875rem;
 }

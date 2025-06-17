@@ -5,6 +5,7 @@
 
 .section__menu h2 {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .section__menu ul {
@@ -16,18 +17,22 @@
 
 @media screen and (min-width: 48rem) {
     .section__menu {
-        padding: 2rem;
+        padding: 1.8125rem 2rem 2rem;
+    }
+
+    .section__menu h2 {
+        text-align: left;
     }
 }
 
 @media screen and (min-width: 64.4375rem) {
     .section__menu {
-        padding-top: 3.5rem;
+        padding-top: 3.5625rem;
     }
 }
 
 @media screen and (min-width: 65.25rem) {
     .section__menu {
-        padding-top: 4.45rem;
+        padding-top: 4.5rem;
     }
 }

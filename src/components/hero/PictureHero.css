@@ -2,7 +2,7 @@
     margin-top: 2rem;
 }
 
-.section__hero img {
+.section__hero picture img {
     border-radius: var(--radius-out);
     box-shadow: var(--shadow);
     border: var(--border);
@@ -16,7 +16,7 @@
         flex: 1;
     }
 
-    .section__hero img {
+    .section__hero picture img {
         position: absolute;
         height: 28.125rem;
         object-fit: cover;

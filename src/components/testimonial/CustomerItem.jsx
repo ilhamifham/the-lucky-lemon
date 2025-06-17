@@ -2,7 +2,7 @@ import "./CustomerItem.css";
 
 function CustomerItem({ item }) {
     return (
-        <li>
+        <li className="card__ui">
             <div>
                 <picture>
                     <source srcSet={item.webp} type="image/webp" />

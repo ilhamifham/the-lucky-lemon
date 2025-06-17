@@ -6,7 +6,7 @@ function Menu() {
     return (
         <section className="section__menu">
             <div>
-                <h2>Our Specials</h2>
+                <h2>Our Main Meals</h2>
                 <ul>
                     {menuItems.map((menuItem, index) => {
                         return <ListItem key={index} item={menuItem} />
