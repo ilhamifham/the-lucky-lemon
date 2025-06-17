@@ -6,7 +6,7 @@
    width="40px"
    viewBox="0 0 40 40"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo-header.svg"
    version="1.1"
    id="svg1"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -41,7 +41,7 @@
        rx="20"
        y="1"
        ry="20"
-       fill="#F4CE14"
+       fill="#edefee"
        x="1"
        id="rect1" />
     <path

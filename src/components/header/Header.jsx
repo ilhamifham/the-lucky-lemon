@@ -1,6 +1,6 @@
 import "./Header.css";
 import { Link } from "react-router";
-import Logo from "/src/assets/logo.svg";
+import Logo from "/src/assets/logo-header.svg";
 import LinkCart from "./LinkCart.jsx";
 
 function Header() {

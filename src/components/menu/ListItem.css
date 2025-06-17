@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: space-between;
     font-size: 1.1875rem;
-    font-family: var(--karla-md);
+    font-family: var(--karla-b);
 }
 
 .section__menu li>div>div:first-child div {

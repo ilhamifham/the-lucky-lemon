@@ -1,22 +1,22 @@
 header {
     padding: 1rem;
     position: fixed;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    background-color: var(--highlight-1);
-    margin: 0 auto;
+    left: 0;
+    right: 0;
     z-index: 1;
-    border-radius: 100px 72px 72px 100px;
-    max-width: 75rem;
-    min-width: 18rem;
-    box-shadow: var(--shadow);
-    border: var(--border);
 }
 
 header>div {
     display: flex;
     align-items: center;
+    background-color: var(--highlight-1);
+    margin: 0 auto;
+    border-radius: 100px 70px 70px 100px;
+    max-width: 75rem;
+    min-width: 18rem;
+    box-shadow: var(--shadow);
+    border: var(--border);
+    padding: 1rem;
 }
 
 header .link__logo {
@@ -26,7 +26,6 @@ header .link__logo {
 
 @media screen and (min-width: 48rem) {
     header {
-        left: 2rem;
-        right: 2rem;
+        padding: 1rem 2rem;
     }
 }

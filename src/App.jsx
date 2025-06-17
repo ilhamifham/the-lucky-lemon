@@ -5,6 +5,7 @@ import CartContextProvider from "./components/provider/CartContextProvider.jsx";
 import HomePage from "./pages/Home.jsx";
 import CartPage from "./pages/Cart.jsx";
 import ReservationPage from "./pages/Reservation.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="reservation" element={<ReservationPage />} />
         </Routes>
       </main>
+      <Footer />
     </CartContextProvider>
   );
 }

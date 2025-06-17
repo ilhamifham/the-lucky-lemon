@@ -27,6 +27,11 @@ section>div {
     border-radius: var(--radius-out);
     white-space: nowrap;
     display: inline-block;
+    transition: opacity 250ms ease-in-out;
+}
+
+.button__ui:hover {
+    opacity: 0.9;
 }
 
 h2 {
