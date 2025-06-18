@@ -1,6 +1,7 @@
 .section__hero {
-    padding: 7.1875rem 1rem 2rem;
+    padding: 6.6875rem 1rem 2rem;
     color: var(--light);
+    background-color: var(--primary-1);
 }
 
 .section__hero>div>div {
@@ -35,7 +36,7 @@ h1+div img {
 
 @media screen and (min-width: 48rem) {
     .section__hero {
-        padding: 7.5rem 2rem 2.5rem;
+        padding: 6.6875rem 2rem 2.5rem;
     }
 
     .section__hero>div {

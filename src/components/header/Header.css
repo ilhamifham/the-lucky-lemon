@@ -4,19 +4,16 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
+    background-color: var(--highlight-1);
+    box-shadow: var(--shadow);
+    border-bottom: var(--border);
 }
 
 header>div {
     display: flex;
     align-items: center;
-    background-color: var(--highlight-1);
     margin: 0 auto;
-    border-radius: 100px 70px 70px 100px;
     max-width: 75rem;
-    min-width: 18rem;
-    box-shadow: var(--shadow);
-    border: var(--border);
-    padding: 1rem;
 }
 
 header .link__logo {

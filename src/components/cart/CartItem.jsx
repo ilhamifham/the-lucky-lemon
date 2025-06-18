@@ -1,0 +1,45 @@
+import "./CartItem.css";
+import { useCartContext } from "/src/contexts/useCartContext.js";
+import Trash from "/src/assets/trash.svg";
+
+function CartItem({ item }) {
+    const { changeQuantity, deleteCartItem } = useCartContext();
+
+    function handleQuantity(event) {
+        changeQuantity(item, event.target.value);
+    }
+
+    function handleDelete() {
+        deleteCartItem(item);
+    }
+
+    return (
+        <li className="card__ui">
+            <picture>
+                <source srcSet={item.webp} type="image/webp" />
+                <img src={item.png} alt={item.title} width={274} height={147} />
+            </picture>
+            <div>
+                <h3>{item.title}</h3>
+                <div>RS. {item.price * item.quantity}</div>
+                <div>
+                    <select name="quantity" value={item.quantity} onChange={handleQuantity}>
+                        {[...Array(10)].map((_, index) => {
+                            const number = index + 1;
+                            return (
+                                <option key={number} value={number}>
+                                    {number}
+                                </option>
+                            );
+                        })}
+                    </select>
+                    <button onClick={handleDelete}>
+                        <img src={Trash} alt="delete item" width={40} height={40} />
+                    </button>
+                </div>
+            </div>
+        </li>
+    )
+}
+
+export default CartItem;

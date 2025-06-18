@@ -2,9 +2,9 @@ import { Routes, Route } from "react-router";
 import "./App.css";
 import Header from "./components/header/Header.jsx";
 import CartContextProvider from "./components/provider/CartContextProvider.jsx";
-import HomePage from "./pages/Home.jsx";
-import CartPage from "./pages/Cart.jsx";
-import ReservationPage from "./pages/Reservation.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import CartPage from "./pages/CartPage.jsx";
+import ReservationPage from "./pages/ReservationPage.jsx";
 import Footer from "./components/footer/Footer.jsx";
 
 function App() {
