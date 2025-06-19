@@ -7,33 +7,30 @@ function Cart() {
     const { cartItems, cartItemsPrice, cartItemsCount } = useCartContext();
 
     return (
-        <section className="section__cart">
-            <div>
-                <h2>Cart</h2>
-                {cartItems.length !== 0 ? (
-                    <div>
-                        <ul>
-                            {cartItems.map((item, index) => {
-                                return <CartItem key={index} item={item} />;
-                            })}
-                        </ul>
-                        <div className="cart__total">
-                            <div>
-                                <div>{cartItemsCount} Items:</div>
-                                <div>RS. {cartItemsPrice}</div>
-                            </div>
-                            <div>
-                                <div>Total:</div>
-                                <div>Rs. {cartItemsPrice}</div>
-                            </div>
-                            <button className="button__ui">Go to Checkout</button>
+        <>
+            {cartItems.length !== 0 ? (
+                <div>
+                    <ul>
+                        {cartItems.map((item, index) => {
+                            return <CartItem key={index} item={item} />;
+                        })}
+                    </ul>
+                    <div className="cart__total">
+                        <div>
+                            <div>{cartItemsCount} Items:</div>
+                            <div>RS. {cartItemsPrice}</div>
                         </div>
+                        <div>
+                            <div>Total:</div>
+                            <div>Rs. {cartItemsPrice}</div>
+                        </div>
+                        <button className="button__ui">Go to Checkout</button>
                     </div>
-                ) : (
-                    <EmptyCart />
-                )}
-            </div>
-        </section>
+                </div>
+            ) : (
+                <EmptyCart />
+            )}
+        </>
     );
 }
 

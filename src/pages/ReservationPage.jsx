@@ -1,8 +1,13 @@
+import Reservation from "../components/reservation/Reservation.jsx";
+
 function ReservationPage() {
     return (
-        <div>
-            Reservation page
-        </div>
+        <section className="section__reservation">
+            <div>
+                <h2>Reservation</h2>
+                <Reservation />
+            </div>
+        </section>
     )
 }
 
