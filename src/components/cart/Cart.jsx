@@ -2,10 +2,9 @@ import "./Cart.css";
 import EmptyCart from "./EmptyCart.jsx";
 import { useCartContext } from "/src/contexts/useCartContext.js";
 import CartItem from "./CartItem.jsx";
-import Add from "/src/assets/add.svg";
 
 function Cart() {
-    const { cartItems, cartItemsPrice } = useCartContext();
+    const { cartItems, cartItemsPrice, cartItemsCount } = useCartContext();
 
     return (
         <section className="section__cart">
@@ -20,18 +19,14 @@ function Cart() {
                         </ul>
                         <div className="cart__total">
                             <div>
-                                <div>Subtotal:</div>
+                                <div>{cartItemsCount} Items:</div>
                                 <div>RS. {cartItemsPrice}</div>
                             </div>
                             <div>
-                                <div>Delivery Charge:</div>
-                                <div>Rs. 150</div>
-                            </div>
-                            <div>
                                 <div>Total:</div>
-                                <div>Rs. {cartItemsPrice + 150}</div>
+                                <div>Rs. {cartItemsPrice}</div>
                             </div>
-                            <button className="button__ui">Checkout</button>
+                            <button className="button__ui">Go to Checkout</button>
                         </div>
                     </div>
                 ) : (

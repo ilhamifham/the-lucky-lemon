@@ -1,6 +1,7 @@
 import "./CartItem.css";
 import { useCartContext } from "/src/contexts/useCartContext.js";
 import Trash from "/src/assets/trash.svg";
+import Chevron from "/src/assets/chevron.svg";
 
 function CartItem({ item }) {
     const { changeQuantity, deleteCartItem } = useCartContext();
@@ -23,6 +24,8 @@ function CartItem({ item }) {
                 <h3>{item.title}</h3>
                 <div>RS. {item.price * item.quantity}</div>
                 <div>
+                    <div>QTY:</div>
+                    <img src={Chevron} alt="" className="img__chevron" width={12} height={12} />
                     <select name="quantity" value={item.quantity} onChange={handleQuantity}>
                         {[...Array(10)].map((_, index) => {
                             const number = index + 1;

@@ -36,13 +36,13 @@
 .section__cart .cart__total>div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 0.625rem;
     font-size: 1.125rem;
 }
 
 .section__cart .cart__total>div:last-of-type {
     border-top: var(--border);
-    padding-top: 1rem;
+    padding-top: 0.625rem;
     font-family: var(--karla-b);
 }
 
@@ -62,10 +62,14 @@
     }
 
     .section__cart .cart__total {
-        position: static;
-        border: none;
-        box-shadow: none;
-        padding: 0;
+        position: sticky;
+        top: 6.563rem;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        border: var(--border);
+        border-radius: var(--radius-out);
+        height: 100%;
     }
 
     .section__cart ul {
