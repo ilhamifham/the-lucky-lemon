@@ -13,6 +13,7 @@
 .section__testimonial li>p {
     max-height: 6rem;
     overflow: hidden;
+    opacity: 0.8;
 }
 
 .section__testimonial li picture {
@@ -22,8 +23,6 @@
 }
 
 .section__testimonial li img {
-    border: var(--border);
-    box-shadow: var(--shadow);
     border-radius: var(--radius-in);
 }
 

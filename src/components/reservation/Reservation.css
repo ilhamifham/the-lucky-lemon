@@ -14,9 +14,10 @@
     border: var(--border);
     border-radius: var(--radius-out);
     box-shadow: var(--shadow);
-    padding: 1rem;
-    max-width: 40rem;
+    padding: 0.625rem 1rem 1rem;
+    max-width: 35rem;
     margin: 1.5625rem auto 0;
+    background-color: var(--highlight-3);
 }
 
 .section__reservation form button {
@@ -36,6 +37,7 @@
 .section__reservation form label {
     font-family: var(--karla-md);
     margin-bottom: 1px;
+    color: var(--highlight-2);
 }
 
 .section__reservation form input,
@@ -45,6 +47,30 @@
     border-radius: var(--radius-in);
     margin-bottom: 18px;
     height: 2.5rem;
+    background-color: var(--highlight-1);
+    color: var(--highlight-2);
+}
+
+.section__reservation form select {
+    cursor: pointer;
+}
+
+.section__reservation form input::placeholder,
+.section__reservation form select:invalid {
+    color: #808080;
+}
+
+.section__reservation form .select-group {
+    position: relative;
+}
+
+.section__reservation form .select-group svg {
+    position: absolute;
+    width: 0.75rem;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 @media screen and (min-width: 48rem) {

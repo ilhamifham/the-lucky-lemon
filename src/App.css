@@ -45,6 +45,6 @@ h2 {
     border-radius: var(--radius-out);
     box-shadow: var(--shadow);
     border: var(--border);
-    background-color: var(--primary-1);
-    color: var(--light);
+    background-color: var(--highlight-3);
+    color: var(--highlight-4);
 }

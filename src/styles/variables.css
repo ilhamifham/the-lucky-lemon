@@ -2,9 +2,10 @@
     --primary-1: #495E57;
     --primary-2: #F4CE14;
     --highlight-1: #EDEFEE;
-    --highlight-2: #333333;
+    --highlight-2: #121011;
+    --highlight-3: #FFFFFF;
     --light: #EDEFEE;
-    --dark: #333333;
+    --dark: #121011;
 
     --markazi: "Markazi";
     --markazi-md: "Markazi Medium";
@@ -18,14 +19,15 @@
 
     --shadow: 0px 0px 20px 10px #00000010;
 
-    --border: 1px solid #00000020;
+    --border: 1px solid #00000025;
 
     --letter-spacing: -0.03125em;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --highlight-1: #333333;
+        --highlight-1: #121011;
         --highlight-2: #EDEFEE;
+        --highlight-3: #000000;
     }
 }

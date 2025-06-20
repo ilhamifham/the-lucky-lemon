@@ -20,7 +20,7 @@
 }
 
 .section__menu li>div>div:first-child div {
-    background-color: var(--dark);
+    background-color: var(--highlight-1);
     padding: 0 0.5rem;
     border-radius: var(--radius-in);
 }
@@ -30,4 +30,5 @@
     max-height: 6rem;
     margin-top: 0.6875rem;
     margin-bottom: 0.875rem;
+    opacity: 0.8;
 }

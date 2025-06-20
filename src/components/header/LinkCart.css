@@ -13,8 +13,8 @@ header .link__cart span {
     background-color: var(--primary-2);
     padding: 0 0.445rem;
     border-radius: 100px;
-    top: -0.6rem;
-    right: -0.6rem;
-    border: 2px solid var(--highlight-1);
-    min-width: 28px;
+    top: -0.5rem;
+    right: -0.5rem;
+    min-width: 26px;
+    min-height: 26px;
 }

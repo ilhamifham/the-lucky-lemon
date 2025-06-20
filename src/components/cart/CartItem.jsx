@@ -1,7 +1,7 @@
 import "./CartItem.css";
 import { useCartContext } from "/src/contexts/useCartContext.js";
 import Trash from "/src/assets/trash.svg";
-import Chevron from "/src/assets/chevron.svg";
+import Chevron from "../ui/Chevron.jsx";
 
 function CartItem({ item }) {
     const { changeQuantity, deleteCartItem } = useCartContext();
@@ -25,17 +25,19 @@ function CartItem({ item }) {
                 <div>RS. {item.price * item.quantity}</div>
                 <div>
                     <div>QTY:</div>
-                    <img src={Chevron} alt="" className="img__chevron" width={12} height={12} />
-                    <select name="quantity" value={item.quantity} onChange={handleQuantity}>
-                        {[...Array(10)].map((_, index) => {
-                            const number = index + 1;
-                            return (
-                                <option key={number} value={number}>
-                                    {number}
-                                </option>
-                            );
-                        })}
-                    </select>
+                    <div className="select-group">
+                        <select name="quantity" value={item.quantity} onChange={handleQuantity}>
+                            {[...Array(10)].map((_, index) => {
+                                const number = index + 1;
+                                return (
+                                    <option key={number} value={number}>
+                                        {number}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                        <Chevron />
+                    </div>
                     <button onClick={handleDelete}>
                         <img src={Trash} alt="delete item" width={40} height={40} />
                     </button>

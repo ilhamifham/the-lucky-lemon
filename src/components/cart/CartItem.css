@@ -32,6 +32,7 @@
 
 .section__cart li h3+div {
     margin: 0.5rem 0 0.6875rem 0;
+    opacity: 0.8;
 }
 
 .section__cart li>div div:last-child {
@@ -39,20 +40,26 @@
     align-items: center;
 }
 
-.section__cart li>div div:last-child .img__chevron {
-    width: 0.75rem;
+.section__cart li>div div:last-child .select-group {
+    position: relative;
+    margin-left: 0.25rem;
+    margin-right: auto;
+}
+
+.section__cart li .select-group svg {
     position: absolute;
-    transform: translateX(4.25rem);
+    width: 0.75rem;
     pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.4375rem;
 }
 
 .section__cart li>div div:last-child select {
     width: 3rem;
     height: 2.5rem;
-    background-color: var(--dark);
+    background-color: var(--highlight-1);
     border-radius: var(--radius-in);
-    margin-left: 0.25rem;
-    margin-right: auto;
     cursor: pointer;
     padding-left: 0.4375rem;
 }
