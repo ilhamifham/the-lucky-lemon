@@ -3,8 +3,9 @@
 }
 
 .section__menu h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.625rem;
     text-align: center;
+    color: var(--text);
 }
 
 .section__menu ul {
@@ -16,22 +17,28 @@
 
 @media screen and (min-width: 48rem) {
     .section__menu {
-        padding: 1.8125rem 2rem 2rem;
-    }
-
-    .section__menu h2 {
-        text-align: left;
+        padding: 6.75rem 2rem 2rem;
     }
 }
 
 @media screen and (min-width: 64.4375rem) {
     .section__menu {
-        padding-top: 3.5625rem;
+        padding-top: 10.75rem;
     }
 }
 
 @media screen and (min-width: 65.25rem) {
     .section__menu {
-        padding-top: 4.5rem;
+        padding-top: 12.4375rem;
+    }
+}
+
+@media screen and (min-width: 79rem) {
+    .section__menu {
+        padding-top: 8.375rem;
+    }
+
+    .section__menu h2 {
+        text-align: left;
     }
 }

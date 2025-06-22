@@ -5,9 +5,13 @@ import CartItem from "./CartItem.jsx";
 
 function Cart() {
     const { cartItems, cartItemsPrice, cartItemsCount } = useCartContext();
+    const textCenterStyle = {
+        textAlign: "center",
+    }
 
     return (
         <>
+            <h2 style={cartItems.length === 0 ? textCenterStyle : null}>Cart</h2>
             {cartItems.length !== 0 ? (
                 <div>
                     <ul>

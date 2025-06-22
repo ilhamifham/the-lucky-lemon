@@ -1,16 +1,17 @@
 .section__about {
     padding: 1.6875rem 1rem 2rem;
     background-color: var(--primary-1);
-    color: var(--light);
 }
 
 .section__about h2 {
     margin-bottom: 1.25rem;
+    color: var(--primary-text);
 }
 
 .section__about p {
     font-size: 1.125rem;
     margin-bottom: 1.5625rem;
+    color: var(--primary-text-muted);
 }
 
 .section__about div>div:last-child {

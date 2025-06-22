@@ -2,24 +2,22 @@
     padding: 1rem 1rem 0.8125rem;
 }
 
-.section__testimonial li>div {
-    display: flex;
-    align-items: center;
+.section__testimonial li div {
     margin-bottom: 0.6875rem;
     font-size: 1.1875rem;
     font-family: var(--karla-b);
+    color: var(--text);
 }
 
-.section__testimonial li>p {
+.section__testimonial li p {
     max-height: 6rem;
     overflow: hidden;
-    opacity: 0.8;
 }
 
 .section__testimonial li picture {
     width: 5rem;
     height: 5rem;
-    margin-right: 1rem;
+    margin-bottom: 0.6875rem;
 }
 
 .section__testimonial li img {

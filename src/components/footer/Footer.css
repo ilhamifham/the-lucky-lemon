@@ -1,7 +1,6 @@
 footer {
     padding: 2rem 1rem 1.5625rem;
     background-color: var(--primary-1);
-    color: var(--light);
 }
 
 footer>div {
@@ -18,12 +17,13 @@ footer>div>div div {
     font-family: var(--karla-b);
     font-size: 1.1875rem;
     margin-bottom: 0.5rem;
+    color: var(--primary-text);
 }
 
 footer>div>div:nth-of-type(2) {
     margin: 1.25rem 0;
-    border-top: var(--border);
-    border-bottom: var(--border);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     padding: 1.25rem 0;
 }
 
@@ -31,6 +31,7 @@ footer ul {
     display: flex;
     flex-direction: column;
     gap: 0.5625rem;
+    color: var(--primary-text-muted);
 }
 
 footer ul a {

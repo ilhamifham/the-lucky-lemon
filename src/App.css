@@ -8,8 +8,8 @@ html {
 }
 
 body {
-    background-color: var(--highlight-1);
-    color: var(--highlight-2);
+    background-color: var(--bg-dark);
+    color: var(--text-muted);
     min-width: 20rem;
 }
 
@@ -21,7 +21,7 @@ section>div {
 
 .button__ui {
     background-color: var(--primary-2);
-    color: var(--dark);
+    color: hsl(0, 0%, 5%);
     font-family: var(--karla-md);
     padding: 0.5rem 1.5rem;
     border-radius: var(--radius-out);
@@ -43,8 +43,5 @@ h2 {
 .card__ui {
     max-width: 17.25rem;
     border-radius: var(--radius-out);
-    box-shadow: var(--shadow);
-    border: var(--border);
-    background-color: var(--highlight-3);
-    color: var(--highlight-4);
+    background-color: var(--bg);
 }

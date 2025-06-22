@@ -5,6 +5,7 @@
 .section__testimonial h2 {
     text-align: center;
     margin-bottom: 1.625rem;
+    color: var(--text);
 }
 
 .section__testimonial ul {
@@ -17,5 +18,11 @@
 @media screen and (min-width: 48rem) {
     .section__testimonial {
         padding: 1.6875rem 2rem 2rem;
+    }
+}
+
+@media screen and (min-width: 79rem) {
+    .section__testimonial h2 {
+        text-align: left;
     }
 }

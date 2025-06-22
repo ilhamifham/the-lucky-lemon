@@ -4,8 +4,6 @@
 
 .section__hero picture img {
     border-radius: var(--radius-out);
-    box-shadow: var(--shadow);
-    border: var(--border);
 }
 
 @media screen and (min-width: 48rem) {

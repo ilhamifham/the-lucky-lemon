@@ -1,5 +1,5 @@
 .section__reservation {
-    padding: 6.6875rem 1rem 2rem;
+    padding: 6.5625rem 1rem 2rem;
 }
 
 .section__reservation>div {
@@ -7,17 +7,15 @@
 }
 
 .section__reservation h2 {
-    text-align: center;
+    color: var(--text);
 }
 
 .section__reservation form {
-    border: var(--border);
     border-radius: var(--radius-out);
-    box-shadow: var(--shadow);
     padding: 0.625rem 1rem 1rem;
     max-width: 35rem;
     margin: 1.5625rem auto 0;
-    background-color: var(--highlight-3);
+    background-color: var(--bg);
 }
 
 .section__reservation form button {
@@ -37,18 +35,17 @@
 .section__reservation form label {
     font-family: var(--karla-md);
     margin-bottom: 1px;
-    color: var(--highlight-2);
+    color: var(--text);
 }
 
 .section__reservation form input,
 .section__reservation form select {
     padding: 5.5px 10px;
-    border: var(--border);
     border-radius: var(--radius-in);
     margin-bottom: 18px;
     height: 2.5rem;
-    background-color: var(--highlight-1);
-    color: var(--highlight-2);
+    background-color: var(--bg-light);
+    color: var(--text);
 }
 
 .section__reservation form select {
@@ -57,7 +54,7 @@
 
 .section__reservation form input::placeholder,
 .section__reservation form select:invalid {
-    color: #808080;
+    color: hsl(0, 0%, 50%);
 }
 
 .section__reservation form .select-group {
@@ -71,6 +68,13 @@
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+    color: var(--text);
+}
+
+@media screen and (min-width: 37rem) {
+    .section__reservation h2 {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 48rem) {

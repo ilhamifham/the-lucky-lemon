@@ -4,9 +4,8 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: var(--highlight-3);
-    box-shadow: var(--shadow);
-    border-bottom: var(--border);
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
 }
 
 header>div {

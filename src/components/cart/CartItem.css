@@ -28,16 +28,17 @@
 .section__cart li h3 {
     font-family: var(--karla-b);
     font-size: 1.25rem;
+    color: var(--text);
 }
 
 .section__cart li h3+div {
     margin: 0.5rem 0 0.6875rem 0;
-    opacity: 0.8;
 }
 
 .section__cart li>div div:last-child {
     display: flex;
     align-items: center;
+    color: var(--text);
 }
 
 .section__cart li>div div:last-child .select-group {
@@ -58,7 +59,7 @@
 .section__cart li>div div:last-child select {
     width: 3rem;
     height: 2.5rem;
-    background-color: var(--highlight-1);
+    background-color: var(--bg-light);
     border-radius: var(--radius-in);
     cursor: pointer;
     padding-left: 0.4375rem;

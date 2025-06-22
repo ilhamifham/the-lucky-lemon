@@ -1,5 +1,5 @@
 .section__cart {
-    padding: 6.6875rem 1rem 2rem;
+    padding: 6.5625rem 1rem 2rem;
 }
 
 .section__cart>div {
@@ -7,7 +7,7 @@
 }
 
 .section__cart h2 {
-    text-align: center;
+    color: var(--text);
 }
 
 .section__cart>div>div {
@@ -27,9 +27,8 @@
     left: 0;
     right: 0;
     padding: 0.75rem 1rem 1rem;
-    background-color: var(--highlight-3);
-    border-top: var(--border);
-    box-shadow: var(--shadow);
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border);
 }
 
 .section__cart .cart__total>div {
@@ -40,9 +39,10 @@
 }
 
 .section__cart .cart__total>div:last-of-type {
-    border-top: var(--border);
+    border-top: 1px solid var(--border);
     padding-top: 0.625rem;
     font-family: var(--karla-b);
+    color: var(--text);
 }
 
 .section__cart .cart__total .button__ui {
@@ -66,9 +66,10 @@
         bottom: auto;
         left: auto;
         right: auto;
-        border: var(--border);
+        border: none;
         border-radius: var(--radius-out);
         height: 100%;
+        background-color: var(--bg);
     }
 
     .section__cart ul {

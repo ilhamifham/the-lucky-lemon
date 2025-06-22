@@ -1,8 +1,5 @@
 .section__about img {
     border-radius: var(--radius-out);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    border: var(--border);
 }
 
 .section__about div>div:last-child picture:first-child {

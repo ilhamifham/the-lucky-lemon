@@ -1,11 +1,6 @@
 :root {
     --primary-1: #495E57;
     --primary-2: #F4CE14;
-    --highlight-1: #EDEFEE;
-    --highlight-2: #121011;
-    --highlight-3: #FFFFFF;
-    --light: #EDEFEE;
-    --dark: #121011;
 
     --markazi: "Markazi";
     --markazi-md: "Markazi Medium";
@@ -17,17 +12,25 @@
     --radius-out: 26px;
     --radius-in: 10px;
 
-    --shadow: 0px 0px 20px 10px #00000010;
-
-    --border: 1px solid #00000025;
-
     --letter-spacing: -0.03125em;
+
+    --primary-text: hsl(0, 0%, 100%);
+    --primary-text-muted: hsl(0, 0%, 95%);
+    --bg-dark: hsl(0, 0%, 90%);
+    --bg: hsl(0, 0%, 95%);
+    --bg-light: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 5%);
+    --text-muted: hsl(0, 0%, 35%);
+    --border: hsl(0, 0%, 80%);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --highlight-1: #121011;
-        --highlight-2: #EDEFEE;
-        --highlight-3: #000000;
+        --bg-dark: hsl(0, 0%, 0%);
+        --bg: hsl(0, 0%, 5%);
+        --bg-light: hsl(0, 0%, 10%);
+        --text: hsl(0, 0%, 95%);
+        --text-muted: hsl(0, 0%, 65%);
+        --border: hsl(0, 0%, 10%);
     }
 }

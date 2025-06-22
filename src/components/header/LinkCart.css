@@ -5,12 +5,12 @@ header .link__cart {
 
 header .link__cart span {
     font-family: var(--karla-md);
-    color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: var(--primary-2);
+    background-color: var(--text);
+    color: var(--bg);
     padding: 0 0.445rem;
     border-radius: 100px;
     top: -0.5rem;
