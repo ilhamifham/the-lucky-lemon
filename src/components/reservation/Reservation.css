@@ -21,28 +21,34 @@
 .section__reservation form button {
     width: 100%;
     border-radius: var(--radius-in);
-    margin-top: 6px;
+    margin-top: 26px;
 }
 
 .section__reservation form label,
 .section__reservation form input,
-.section__reservation form select {
+.section__reservation form select,
+.section__reservation form .label {
     display: block;
     width: 100%;
     font-size: 1.125rem;
 }
 
-.section__reservation form label {
+.section__reservation form label,
+.section__reservation form .label {
     font-family: var(--karla-md);
     margin-bottom: 1px;
+    margin-top: 18px;
     color: var(--text);
+}
+
+.section__reservation form input::placeholder {
+    color: hsl(0, 0%, 50%);
 }
 
 .section__reservation form input,
 .section__reservation form select {
     padding: 5.5px 10px;
     border-radius: var(--radius-in);
-    margin-bottom: 18px;
     height: 2.5rem;
     background-color: var(--bg-light);
     color: var(--text);
@@ -50,11 +56,6 @@
 
 .section__reservation form select {
     cursor: pointer;
-}
-
-.section__reservation form input::placeholder,
-.section__reservation form select:invalid {
-    color: hsl(0, 0%, 50%);
 }
 
 .section__reservation form .select-group {
@@ -69,6 +70,32 @@
     transform: translateY(-50%);
     pointer-events: none;
     color: var(--text);
+}
+
+.section__reservation form .date {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.section__reservation form .date .select-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.section__reservation form .date .select-group:nth-child(2) {
+    margin: 0 1rem;
+}
+
+.section__reservation form #name {
+    text-transform: capitalize;
+}
+
+.section__reservation form .error {
+    color: red;
+}
+
+.section__reservation form label:first-child {
+    margin-top: 0;
 }
 
 @media screen and (min-width: 37rem) {
