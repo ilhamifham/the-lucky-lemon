@@ -22,11 +22,11 @@ function Cart() {
                     <div className="cart__total">
                         <div>
                             <div>{cartItemsCount} Items:</div>
-                            <div>RS. {cartItemsPrice}</div>
+                            <div>RS. {cartItemsPrice.toLocaleString()}</div>
                         </div>
                         <div>
                             <div>Total:</div>
-                            <div>Rs. {cartItemsPrice}</div>
+                            <div>Rs. {cartItemsPrice.toLocaleString()}</div>
                         </div>
                         <button className="button__ui">Go to Checkout</button>
                     </div>

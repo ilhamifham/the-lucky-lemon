@@ -6,12 +6,16 @@ import HomePage from "./pages/HomePage.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import ReservationPage from "./pages/ReservationPage.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import DocumentTitle from "./components/common/DocumentTitle.jsx";
+import ScrollTop from "./components/common/ScrollTop.jsx";
 
 function App() {
   return (
     <CartContextProvider>
       <Header />
       <main>
+        <DocumentTitle />
+        <ScrollTop />
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="cart" element={<CartPage />} />

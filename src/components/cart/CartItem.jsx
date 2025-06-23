@@ -22,7 +22,7 @@ function CartItem({ item }) {
             </picture>
             <div>
                 <h3>{item.title}</h3>
-                <div>RS. {item.price * item.quantity}</div>
+                <div>RS. {(item.price * item.quantity).toLocaleString()}</div>
                 <div>
                     <div>QTY:</div>
                     <div className="select-group">
