@@ -9,8 +9,8 @@ header .link__cart span {
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: var(--text);
-    color: var(--bg);
+    background-color: red;
+    color: white;
     padding: 0 0.445rem;
     border-radius: 100px;
     top: -0.5rem;
