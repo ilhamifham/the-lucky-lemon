@@ -4,6 +4,7 @@
 
 .section__reservation>div {
     margin-top: -0.3125rem;
+    min-height: calc(100vh - 47.375rem);
 }
 
 .section__reservation h2 {
@@ -22,7 +23,7 @@
 .section__reservation form button {
     width: 100%;
     border-radius: var(--radius-in);
-    margin-top: 26px;
+    margin-top: 1.625rem;
 }
 
 .section__reservation form label,
@@ -37,8 +38,8 @@
 .section__reservation form label,
 .section__reservation form .label {
     font-family: var(--karla-md);
-    margin-bottom: 1px;
-    margin-top: 18px;
+    margin-bottom: 0.0625rem;
+    margin-top: 1.125rem;
     color: var(--text);
 }
 
@@ -48,7 +49,7 @@
 
 .section__reservation form input,
 .section__reservation form select {
-    padding: 5.5px 10px;
+    padding: 0.34375rem 0.625rem;
     border-radius: var(--radius-in);
     height: 2.5rem;
     background-color: var(--bg-light);
@@ -73,7 +74,7 @@
 .section__reservation form .select-group svg {
     position: absolute;
     width: 0.75rem;
-    right: 10px;
+    right: 0.625rem;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -114,5 +115,9 @@
 @media screen and (min-width: 48rem) {
     .section__reservation {
         padding: 6.6875rem 2rem 2rem;
+    }
+
+    .section__reservation>div {
+        min-height: calc(100vh - 19.5625rem);
     }
 }
