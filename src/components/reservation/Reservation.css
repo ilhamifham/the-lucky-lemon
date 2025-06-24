@@ -16,6 +16,7 @@
     max-width: 35rem;
     margin: 1.5625rem auto 0;
     background-color: var(--bg);
+    border: 1px solid var(--border);
 }
 
 .section__reservation form button {
@@ -52,6 +53,13 @@
     height: 2.5rem;
     background-color: var(--bg-light);
     color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.section__reservation form input.error,
+.section__reservation form select.error {
+    background-color: var(--bg-error);
+    border: 1px solid var(--border-error);
 }
 
 .section__reservation form select {
@@ -74,7 +82,6 @@
 
 .section__reservation form .date {
     display: flex;
-    margin-bottom: 18px;
 }
 
 .section__reservation form .date .select-group {
@@ -90,7 +97,7 @@
     text-transform: capitalize;
 }
 
-.section__reservation form .error {
+.section__reservation form .error-text {
     color: red;
 }
 

@@ -63,6 +63,7 @@
     border-radius: var(--radius-in);
     cursor: pointer;
     padding-left: 0.4375rem;
+    border: 1px solid var(--border);
 }
 
 .section__cart li button {

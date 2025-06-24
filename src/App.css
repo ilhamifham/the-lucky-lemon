@@ -44,4 +44,5 @@ h2 {
     max-width: 17.25rem;
     border-radius: var(--radius-out);
     background-color: var(--bg);
+    border: 1px solid var(--border);
 }

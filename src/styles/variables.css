@@ -20,8 +20,10 @@
     --bg: hsl(0, 0%, 95%);
     --bg-light: hsl(0, 0%, 100%);
     --text: hsl(0, 0%, 5%);
-    --text-muted: hsl(0, 0%, 35%);
-    --border: hsl(0, 0%, 80%);
+    --text-muted: hsl(0, 0%, 30%);
+    --border: hsl(0, 0%, 85%);
+    --bg-error: hsl(0, 100%, 90%);
+    --border-error: hsl(0, 100%, 85%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +32,10 @@
         --bg: hsl(0, 0%, 5%);
         --bg-light: hsl(0, 0%, 10%);
         --text: hsl(0, 0%, 95%);
-        --text-muted: hsl(0, 0%, 65%);
-        --border: hsl(0, 0%, 10%);
+        --text-muted: hsl(0, 0%, 70%);
+        --border: hsl(0, 0%, 15%);
+        --bg-error: hsl(0, 100%, 10%);
+        --border-error: hsl(0, 100%, 15%);
+
     }
 }
