@@ -4,12 +4,12 @@ import { useLocation } from "react-router";
 function DocumentTitle() {
     const location = useLocation();
     const titles = {
-        "/cart": "Cart | Little Lemon Restaurant",
-        "/reservation": "Reservation | Little Lemon Restaurant",
+        "/cart": "Cart | The Lucky Lemon",
+        "/reservation": "Reservation | The Lucky Lemon",
     };
 
     useEffect(() => {
-        document.title = titles[location.pathname] || "Little Lemon Restaurant";
+        document.title = titles[location.pathname] || "The Lucky Lemon";
     }, [location.pathname]);
 
     return null;
