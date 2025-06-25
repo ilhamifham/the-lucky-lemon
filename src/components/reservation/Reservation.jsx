@@ -1,7 +1,6 @@
 import "./Reservation.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Chevron from "../ui/Chevron.jsx";
-import ReviewDetails from "./ReviewDetails.jsx";
 
 function Reservation() {
     const [errors, setErrors] = useState({});
@@ -17,7 +16,6 @@ function Reservation() {
     const occasionsRef = useRef(null);
     const date = new Date();
     const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-    const availableData = Object.entries(formData).length > 0;
 
     function handleFormSubmit(event) {
         event.preventDefault();
@@ -38,6 +36,16 @@ function Reservation() {
 
             setErrors({});
             setFormData(formData);
+
+            nameRef.current.value = "";
+            phoneRef.current.value = "";
+            emailRef.current.value = "";
+            dayRef.current.value = date.getDate();
+            monthRef.current.value = date.getMonth() + 1;
+            yearRef.current.value = date.getFullYear();
+            timeRef.current.value = "08:00";
+            peopleRef.current.value = "1";
+            occasionsRef.current.value = "routines";
         }
     }
 
@@ -75,165 +83,134 @@ function Reservation() {
         return errors;
     }
 
-    function handleFormData() {
-        setFormData({});
-    }
-
-    function handleCheckout() {
-        handleFormData();
-
-        nameRef.current.value = "";
-        phoneRef.current.value = "";
-        emailRef.current.value = "";
-        dayRef.current.value = date.getDate();
-        monthRef.current.value = date.getMonth() + 1;
-        yearRef.current.value = date.getFullYear();
-        timeRef.current.value = "08:00";
-        peopleRef.current.value = "1";
-        occasionsRef.current.value = "routines";
-    }
-
-    useEffect(() => {
-        if (availableData) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.removeAttribute("style");
-        }
-
-        return () => document.body.removeAttribute("style");
-    }, [availableData]);
-
     return (
-        <>
-            <form onSubmit={(event) => handleFormSubmit(event)}>
-                <label htmlFor="name">Full name</label>
-                <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Enter your full name"
-                    autoComplete="off"
-                    ref={nameRef}
-                    onInput={(event) => { event.target.value = event.target.value.replace(/[^a-zA-Z\s]/g, "") }}
-                    {...(errors.name ? { className: 'error' } : {})}
-                />
-                {errors.name ? <p className="error-text">{errors.name}</p> : null}
-                <label htmlFor="phone">Phone number</label>
-                <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    placeholder="Enter your phone number"
-                    autoComplete="off"
-                    ref={phoneRef}
-                    onInput={(event) => { event.target.value = event.target.value.replace(/\D/g, "") }}
-                    {...(errors.phone ? { className: 'error' } : {})}
-                />
-                {errors.phone ? <p className="error-text">{errors.phone}</p> : null}
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    autoComplete="off"
-                    ref={emailRef}
-                    {...(errors.email ? { className: 'error' } : {})}
-                />
-                {errors.email ? <p className="error-text">{errors.email}</p> : null}
-                <div className="label">Date to come</div>
-                <div className="date">
-                    <div className="select-group">
-                        <select name="day" defaultValue={date.getDate()} ref={dayRef} {...(errors.date ? { className: 'error' } : {})}>
-                            {Array.from({ length: daysInMonth }, (_, index) => index + 1).map(
-                                (day) => {
-                                    return (
-                                        <option key={day} value={day}>
-                                            {day}
-                                        </option>
-                                    );
-                                }
-                            )}
-                        </select>
-                        <Chevron />
-                    </div>
-                    <div className="select-group">
-                        <select name="month" defaultValue={date.getMonth() + 1} ref={monthRef} {...(errors.date ? { className: 'error' } : {})}>
-                            {Array.from({ length: 12 }, (_, index) => index + 1).map(
-                                (month) => {
-                                    return (
-                                        <option key={month} value={month}>
-                                            {month}
-                                        </option>
-                                    );
-                                }
-                            )}
-                        </select>
-                        <Chevron />
-                    </div>
-                    <div className="select-group">
-                        <select name="year" defaultValue={date.getFullYear()} ref={yearRef} {...(errors.date ? { className: 'error' } : {})}>
-                            {Array.from(
-                                { length: 2 },
-                                (_, index) => date.getFullYear() + index
-                            ).map((year) => {
+        <form onSubmit={(event) => handleFormSubmit(event)}>
+            <label htmlFor="name">Full name</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your full name"
+                autoComplete="off"
+                ref={nameRef}
+                onInput={(event) => { event.target.value = event.target.value.replace(/[^a-zA-Z\s]/g, "") }}
+                {...(errors.name ? { className: 'error' } : {})}
+            />
+            {errors.name ? <p className="error-text">{errors.name}</p> : null}
+            <label htmlFor="phone">Phone number</label>
+            <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Enter your phone number"
+                autoComplete="off"
+                ref={phoneRef}
+                onInput={(event) => { event.target.value = event.target.value.replace(/\D/g, "") }}
+                {...(errors.phone ? { className: 'error' } : {})}
+            />
+            {errors.phone ? <p className="error-text">{errors.phone}</p> : null}
+            <label htmlFor="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                autoComplete="off"
+                ref={emailRef}
+                {...(errors.email ? { className: 'error' } : {})}
+            />
+            {errors.email ? <p className="error-text">{errors.email}</p> : null}
+            <div className="label">Date to come</div>
+            <div className="date">
+                <div className="select-group">
+                    <select name="day" defaultValue={date.getDate()} ref={dayRef} {...(errors.date ? { className: 'error' } : {})}>
+                        {Array.from({ length: daysInMonth }, (_, index) => index + 1).map(
+                            (day) => {
                                 return (
-                                    <option key={year} value={year}>
-                                        {year}
+                                    <option key={day} value={day}>
+                                        {day}
                                     </option>
                                 );
-                            })}
-                        </select>
-                        <Chevron />
-                    </div>
-                </div>
-                {errors.date ? <p className="error-text">{errors.date}</p> : null}
-                <label htmlFor="time">Time to come</label>
-                <div className="select-group">
-                    <select name="time" id="time" defaultValue="08:00" ref={timeRef} {...(errors.time ? { className: 'error' } : {})}>
-                        <option value="08:00">08 : 00 A.M</option>
-                        <option value="09:15">09 : 15 A.M</option>
-                        <option value="10:30">10 : 30 A.M</option>
-                        <option value="11:45">11 : 45 A.M</option>
-                        <option value="13:00">01 : 00 P.M</option>
-                        <option value="14:15">02 : 15 P.M</option>
-                        <option value="15:30">03 : 30 P.M</option>
-                        <option value="16:45">04 : 45 P.M</option>
-                        <option value="18:00">06 : 00 P.M</option>
-                        <option value="19:15">07 : 15 P.M</option>
-                        <option value="20:30">08 : 30 P.M</option>
-                        <option value="21:45">09 : 45 P.M</option>
+                            }
+                        )}
                     </select>
                     <Chevron />
                 </div>
-                {errors.time ? <p className="error-text">{errors.time}</p> : null}
-                <label htmlFor="people">Number of people</label>
                 <div className="select-group">
-                    <select name="people" id="people" defaultValue="1" ref={peopleRef}>
-                        {Array.from({ length: 12 }, (_, index) => index + 1).map((people) => {
+                    <select name="month" defaultValue={date.getMonth() + 1} ref={monthRef} {...(errors.date ? { className: 'error' } : {})}>
+                        {Array.from({ length: 12 }, (_, index) => index + 1).map(
+                            (month) => {
+                                return (
+                                    <option key={month} value={month}>
+                                        {month}
+                                    </option>
+                                );
+                            }
+                        )}
+                    </select>
+                    <Chevron />
+                </div>
+                <div className="select-group">
+                    <select name="year" defaultValue={date.getFullYear()} ref={yearRef} {...(errors.date ? { className: 'error' } : {})}>
+                        {Array.from(
+                            { length: 2 },
+                            (_, index) => date.getFullYear() + index
+                        ).map((year) => {
                             return (
-                                <option key={people} value={people}>
-                                    {people}
+                                <option key={year} value={year}>
+                                    {year}
                                 </option>
                             );
                         })}
                     </select>
                     <Chevron />
                 </div>
-                <label htmlFor="occasions">Occasions</label>
-                <div className="select-group">
-                    <select name="occasions" id="occasions" defaultValue="routines" ref={occasionsRef}>
-                        <option value="routines">Routines</option>
-                        <option value="celebrations">Celebrations</option>
-                        <option value="gatherings">Gatherings</option>
-                        <option value="business">Business</option>
-                    </select>
-                    <Chevron />
-                </div>
-                <button className="button__ui">Reserve a Table</button>
-            </form>
-            {availableData ? <ReviewDetails formData={formData} onHandleFormData={handleFormData} onHandleCheckout={handleCheckout} /> : null}
-        </>
+            </div>
+            {errors.date ? <p className="error-text">{errors.date}</p> : null}
+            <label htmlFor="time">Time to come</label>
+            <div className="select-group">
+                <select name="time" id="time" defaultValue="08:00" ref={timeRef} {...(errors.time ? { className: 'error' } : {})}>
+                    <option value="08:00">08 : 00 A.M</option>
+                    <option value="09:15">09 : 15 A.M</option>
+                    <option value="10:30">10 : 30 A.M</option>
+                    <option value="11:45">11 : 45 A.M</option>
+                    <option value="13:00">01 : 00 P.M</option>
+                    <option value="14:15">02 : 15 P.M</option>
+                    <option value="15:30">03 : 30 P.M</option>
+                    <option value="16:45">04 : 45 P.M</option>
+                    <option value="18:00">06 : 00 P.M</option>
+                    <option value="19:15">07 : 15 P.M</option>
+                    <option value="20:30">08 : 30 P.M</option>
+                    <option value="21:45">09 : 45 P.M</option>
+                </select>
+                <Chevron />
+            </div>
+            {errors.time ? <p className="error-text">{errors.time}</p> : null}
+            <label htmlFor="people">Number of people</label>
+            <div className="select-group">
+                <select name="people" id="people" defaultValue="1" ref={peopleRef}>
+                    {Array.from({ length: 12 }, (_, index) => index + 1).map((people) => {
+                        return (
+                            <option key={people} value={people}>
+                                {people}
+                            </option>
+                        );
+                    })}
+                </select>
+                <Chevron />
+            </div>
+            <label htmlFor="occasions">Occasions</label>
+            <div className="select-group">
+                <select name="occasions" id="occasions" defaultValue="routines" ref={occasionsRef}>
+                    <option value="routines">Routines</option>
+                    <option value="celebrations">Celebrations</option>
+                    <option value="gatherings">Gatherings</option>
+                    <option value="business">Business</option>
+                </select>
+                <Chevron />
+            </div>
+            <button className="button__ui">Reserve a Table</button>
+        </form>
     );
 }
 
