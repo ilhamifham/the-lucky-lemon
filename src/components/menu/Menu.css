@@ -21,23 +21,19 @@
     }
 }
 
-@media screen and (min-width: 64.4375rem) {
+@media screen and (min-width: 65.25rem) {
     .section__menu {
-        padding-top: 10.75rem;
+        padding-top: 8.4375rem;
     }
 }
 
-@media screen and (min-width: 65.25rem) {
+@media screen and (min-width: 67rem) {
     .section__menu {
         padding-top: 12.4375rem;
     }
 }
 
 @media screen and (min-width: 79rem) {
-    .section__menu {
-        padding-top: 8.375rem;
-    }
-
     .section__menu h2 {
         text-align: left;
     }
