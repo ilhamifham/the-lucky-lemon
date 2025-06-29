@@ -1,10 +1,11 @@
 .section__about {
-    padding: 1.6875rem 1rem 2rem;
+    padding: 2rem 1rem;
     background-color: var(--primary-1);
 }
 
 .section__about h2 {
-    margin-bottom: 1.25rem;
+    margin-top: -0.4375rem;
+    margin-bottom: 1.1875rem;
     color: var(--primary-text);
 }
 
@@ -32,7 +33,6 @@
 
     .section__about>div div {
         flex: 1;
-        margin-top: -0.3125rem;
     }
 
     .section__about div>div:last-child {

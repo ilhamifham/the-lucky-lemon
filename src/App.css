@@ -15,7 +15,7 @@ body {
 
 /* ====== Utilities ====== */
 section>div {
-    max-width: 75rem;
+    max-width: 26.125rem;
     margin: 0 auto;
 }
 
@@ -41,8 +41,28 @@ h2 {
 }
 
 .card__ui {
-    max-width: 17.25rem;
+    max-width: 26.125rem;
     border-radius: var(--radius-out);
     background-color: var(--bg);
     border: 1px solid var(--border);
+}
+
+@media screen and (min-width: 48rem) {
+    section>div {
+        max-width: 44rem;
+    }
+
+    .card__ui {
+        max-width: 21rem;
+    }
+}
+
+@media screen and (min-width: 82rem) {
+    section>div {
+        max-width: 78rem;
+    }
+
+    .card__ui {
+        max-width: 18rem;
+    }
 }

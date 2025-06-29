@@ -9,7 +9,7 @@ function Footer() {
     const { pathname } = useLocation();
     const screenSize = useWindowSize();
     const paddingBottom = {
-        paddingBottom: "11.1875rem",
+        paddingBottom: "10.5rem",
     }
     const cartCheckout = cartItemsCount > 0 && pathname === "/cart" && screenSize < 768;
 

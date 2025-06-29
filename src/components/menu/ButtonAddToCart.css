@@ -5,9 +5,6 @@
 
 .section__menu li>div>div:last-child {
     display: flex;
-    /* width: 100%;
-    background-color: var(--bg-light);
-    border-radius: 16px; */
 }
 
 .section__menu li>div>div:last-child button {
@@ -31,6 +28,7 @@
     font-family: var(--karla-md);
     color: var(--text);
     width: 2.5rem;
+    flex: 1;
 }
 
 .section__menu li>div>div:last-child>a {

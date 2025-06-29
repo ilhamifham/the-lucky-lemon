@@ -25,7 +25,7 @@ const testimonialItems = [
     {
         name: "Carla Diaz",
         rating: 5.0,
-        quote: "Incredible flavors, beautiful ambiance, and easy online reservation. This place gets everything right.",
+        quote: "Incredible flavors, beautiful ambiance, and easy online reservation. This place gets everything right at right time.",
         png: UserPNG3,
         webp: UserWEBP3,
     },

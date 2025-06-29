@@ -19,7 +19,7 @@ const menuItems = [
     {
         title: "Creamy Mushroom",
         price: 1800,
-        description: "Arborio rice slow-cooked with a creamy mushroom blend, garlic, white wine, parmesan and fresh herbs.",
+        description: "Arborio rice slow-cooked with a creamy mushroom blend, garlic, white wine, parmesan and fresh herbs mixed well.",
         png: MushroomPNG,
         webp: MushroomWEBP,
         quantity: 0,

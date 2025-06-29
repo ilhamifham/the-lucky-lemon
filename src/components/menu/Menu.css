@@ -1,10 +1,10 @@
 .section__menu {
-    padding: 1.6875rem 1rem 2rem;
+    padding: 2rem 1rem;
 }
 
 .section__menu h2 {
-    margin-bottom: 1.625rem;
-    text-align: center;
+    margin-top: -0.375rem;
+    margin-bottom: 1.5625rem;
     color: var(--text);
 }
 
@@ -17,23 +17,19 @@
 
 @media screen and (min-width: 48rem) {
     .section__menu {
-        padding: 6.75rem 2rem 2rem;
+        padding: 6.25rem 2rem 2rem;
+    }
+
+    .section__menu h2 {
+        text-align: center;
     }
 }
 
-@media screen and (min-width: 65.25rem) {
+@media screen and (min-width: 82rem) {
     .section__menu {
-        padding-top: 8.4375rem;
+        padding-top: 8rem;
     }
-}
 
-@media screen and (min-width: 67rem) {
-    .section__menu {
-        padding-top: 12.4375rem;
-    }
-}
-
-@media screen and (min-width: 79rem) {
     .section__menu h2 {
         text-align: left;
     }

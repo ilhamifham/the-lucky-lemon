@@ -4,16 +4,24 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height: calc(100vh - 50.6875rem);
 }
 
 .section__cart .cart__empty div {
     font-size: 1.25rem;
     font-family: var(--karla-md);
-    margin-bottom: 0.5625rem;
+    margin-bottom: 1.125rem;
+    margin-top: -0.4375rem;
     color: var(--text);
 }
 
 .section__cart .cart__empty img {
     width: 8rem;
-    margin-bottom: 1.625rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .section__cart .cart__empty {
+        min-height: calc(100vh - 21.75rem);
+    }
 }
