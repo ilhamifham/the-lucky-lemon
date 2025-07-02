@@ -16,6 +16,8 @@
 .section__menu li h3 {
     letter-spacing: var(--letter-spacing);
     margin-right: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section__menu li .info {
@@ -29,6 +31,7 @@
     font-size: 1.1875rem;
     font-family: var(--karla-b);
     color: var(--text);
+    white-space: nowrap;
 }
 
 .section__menu .info>div:first-child div {

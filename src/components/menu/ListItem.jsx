@@ -12,7 +12,7 @@ function ListItem({ item }) {
                 <div className="info">
                     <div>
                         <h3>{item.title}</h3>
-                        <div>{item.price.toLocaleString()}</div>
+                        <div>RS. {item.price.toLocaleString()}</div>
                     </div>
                     <p>{item.description}</p>
                     <ButtonAddToCart item={item} />

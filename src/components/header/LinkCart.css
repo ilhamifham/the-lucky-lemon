@@ -15,6 +15,6 @@ header .link__cart span {
     border-radius: 100px;
     top: -0.5rem;
     right: -0.5rem;
-    min-width: 1.625rem;
-    min-height: 1.625rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
 }

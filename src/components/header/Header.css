@@ -6,6 +6,7 @@ header {
     z-index: 1;
     background-color: var(--bg-dark);
     border-bottom: 1px solid var(--border);
+    min-width: 20rem;
 }
 
 header>div {
