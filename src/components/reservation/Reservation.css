@@ -113,6 +113,6 @@
 
     .section__reservation>div {
         min-height: calc(100vh - 17.5rem);
-        max-width: 44rem;
+        max-width: 31.25rem;
     }
 }
