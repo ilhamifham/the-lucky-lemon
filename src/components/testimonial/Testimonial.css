@@ -1,32 +1,23 @@
 .section__testimonial {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
+}
+
+.section__testimonial>div {
+    max-width: none;
 }
 
 .section__testimonial h2 {
     margin-top: -0.375rem;
     margin-bottom: 1.5625rem;
     color: var(--text);
-}
-
-.section__testimonial ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-@media screen and (min-width: 48rem) {
-    .section__testimonial {
-        padding: 2rem;
-    }
-
-    .section__testimonial h2 {
-        text-align: center;
-    }
+    padding: 0 1rem;
+    max-width: var(--pd);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 82rem) {
-    .section__testimonial h2 {
-        text-align: left;
+    .section__testimonial .scroll-buttons {
+        display: none;
     }
 }

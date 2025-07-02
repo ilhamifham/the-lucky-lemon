@@ -2,6 +2,11 @@
 @import url("./styles/fonts.css");
 @import url("./styles/variables.css");
 
+/* ====== Scroll Container ====== */
+:root {
+    --pd: 28.125rem;
+}
+
 /* ====== Global ====== */
 html {
     font-family: var(--karla);
@@ -41,28 +46,70 @@ h2 {
 }
 
 .card__ui {
-    max-width: 26.125rem;
     border-radius: var(--radius-out);
     background-color: var(--bg);
     border: 1px solid var(--border);
 }
 
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-left: calc((100% - var(--pd)) / 2);
+    padding-right: calc((100% - var(--pd)) / 2);
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: calc((100% - var(--pd)) / 2);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-buttons {
+    display: none;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    max-width: var(--pd);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scroll-buttons button {
+    width: 2.5rem;
+    border-radius: var(--radius-in);
+}
+
+.scroll-buttons button:first-child {
+    margin-left: auto;
+    transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+    .scroll-buttons {
+        display: flex;
+    }
+}
+
 @media screen and (min-width: 48rem) {
-    section>div {
-        max-width: 44rem;
+    :root {
+        --pd: 46rem;
     }
 
-    .card__ui {
-        max-width: 21rem;
+    section>div {
+        max-width: 44rem;
     }
 }
 
 @media screen and (min-width: 82rem) {
-    section>div {
-        max-width: 78rem;
+    :root {
+        --pd: 80rem;
     }
 
-    .card__ui {
-        max-width: 18rem;
+    section>div {
+        max-width: 78rem;
     }
 }

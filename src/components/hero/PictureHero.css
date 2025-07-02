@@ -16,7 +16,7 @@
 
     .section__hero picture img {
         position: absolute;
-        height: 28.125rem;
+        height: 27.75rem;
         object-fit: cover;
     }
 }
