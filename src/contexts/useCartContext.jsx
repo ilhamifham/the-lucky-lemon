@@ -1,7 +1,8 @@
-import { useState, useEffect, useMemo } from "react";
-import { CartContext } from "/src/contexts/useCartContext.js";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
 
-function CartContextProvider({ children }) {
+const CartContext = createContext(undefined);
+
+export function CartContextProvider({ children }) {
   const [cartItems, setCartItems] = useState(() => JSON.parse(localStorage.getItem("cartItems")) || []);
 
   useEffect(() => {
@@ -55,7 +56,30 @@ function CartContextProvider({ children }) {
     });
   }
 
-  return <CartContext.Provider value={{ cartItems, setCartItems, cartItemsCount, cartItemsPrice, addToCart, removeFromCart, changeQuantity, deleteCartItem }}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider
+      value={{
+        cartItems,
+        setCartItems,
+        cartItemsCount,
+        cartItemsPrice,
+        addToCart,
+        removeFromCart,
+        changeQuantity,
+        deleteCartItem,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 }
 
-export default CartContextProvider;
+export function useCartContext() {
+  const context = useContext(CartContext);
+
+  if (context === undefined) {
+    throw new Error("useCartContext must be used within a CartContextProvider");
+  }
+
+  return context;
+}

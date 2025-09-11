@@ -11,6 +11,7 @@ function DocumentTitle() {
     };
 
     document.title = titles[location.pathname] || "The Lucky Lemon";
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return null;
