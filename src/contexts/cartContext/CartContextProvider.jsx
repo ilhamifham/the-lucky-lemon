@@ -1,18 +1,14 @@
-import { createContext, useContext, useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { CartContext } from "./useCartContext.js";
 
-const CartContext = createContext(undefined);
-
-export function CartContextProvider({ children }) {
+export default function CartContextProvider({ children }) {
   const [cartItems, setCartItems] = useState(() => JSON.parse(localStorage.getItem("cartItems")) || []);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const cartItemsCount = useMemo(() => cartItems.reduce((total, currentCartItem) => total + currentCartItem.quantity, 0), [cartItems]);
-  const cartItemsPrice = useMemo(() => cartItems.reduce((total, currentCartItem) => total + currentCartItem.price * currentCartItem.quantity, 0), [cartItems]);
-
-  function addToCart(item) {
+  const addToCart = useCallback((item) => {
     setCartItems((prevCartItems) => {
       const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
 
@@ -22,9 +18,9 @@ export function CartContextProvider({ children }) {
 
       return [...prevCartItems, { ...item, quantity: 1 }];
     });
-  }
+  }, []);
 
-  function removeFromCart(item) {
+  const removeFromCart = useCallback((item) => {
     setCartItems((prevCartItems) => {
       const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
 
@@ -36,9 +32,9 @@ export function CartContextProvider({ children }) {
 
       return prevCartItems;
     });
-  }
+  }, []);
 
-  function changeQuantity(item, quantity) {
+  const changeQuantity = useCallback((item, quantity) => {
     setCartItems((prevCartItems) => {
       const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
 
@@ -48,19 +44,21 @@ export function CartContextProvider({ children }) {
 
       return prevCartItems;
     });
-  }
+  }, []);
 
-  function deleteCartItem(item) {
+  const deleteCartItem = useCallback((item) => {
     setCartItems((prevCartItems) => {
       return prevCartItems.filter((prevCartItem) => prevCartItem.title !== item.title);
     });
-  }
+  }, []);
+
+  const cartItemsCount = useMemo(() => cartItems.reduce((total, currentCartItem) => total + currentCartItem.quantity, 0), [cartItems]);
+  const cartItemsPrice = useMemo(() => cartItems.reduce((total, currentCartItem) => total + currentCartItem.price * currentCartItem.quantity, 0), [cartItems]);
 
   return (
     <CartContext.Provider
       value={{
         cartItems,
-        setCartItems,
         cartItemsCount,
         cartItemsPrice,
         addToCart,
@@ -72,14 +70,4 @@ export function CartContextProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
-}
-
-export function useCartContext() {
-  const context = useContext(CartContext);
-
-  if (context === undefined) {
-    throw new Error("useCartContext must be used within a CartContextProvider");
-  }
-
-  return context;
 }

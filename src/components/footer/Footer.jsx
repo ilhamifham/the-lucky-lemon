@@ -1,8 +1,8 @@
 import "./Footer.css";
 import FooterContent from "./FooterContent.jsx";
-import { useCartContext } from "/src/contexts/useCartContext.jsx";
+import { useCartContext } from "../../contexts/cartContext/useCartContext.js";
 import { useLocation } from "react-router";
-import { useWindowSize } from "/src/hooks/useWindowSize.js";
+import { useWindowSize } from "../../hooks/useWindowSize.js";
 
 function Footer() {
   const { cartItemsCount } = useCartContext();

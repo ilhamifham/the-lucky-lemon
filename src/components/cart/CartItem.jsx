@@ -1,11 +1,9 @@
+import React from "react";
 import "./CartItem.css";
-import { useCartContext } from "/src/contexts/useCartContext.jsx";
-import Trash from "/src/assets/trash.svg";
+import Trash from "../../assets/trash.svg";
 import Chevron from "../ui/Chevron.jsx";
 
-function CartItem({ item }) {
-  const { changeQuantity, deleteCartItem } = useCartContext();
-
+const CartItem = React.memo(({ item, changeQuantity, deleteCartItem }) => {
   function handleQuantity(event) {
     changeQuantity(item, event.target.value);
   }
@@ -45,6 +43,6 @@ function CartItem({ item }) {
       </div>
     </li>
   );
-}
+});
 
 export default CartItem;

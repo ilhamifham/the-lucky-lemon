@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import "./App.css";
 import Header from "./components/header/Header.jsx";
-import { CartContextProvider } from "./contexts/useCartContext.jsx";
+import CartContextProvider from "./contexts/cartContext/CartContextProvider.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import ReservationPage from "./pages/ReservationPage.jsx";

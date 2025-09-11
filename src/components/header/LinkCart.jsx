@@ -1,7 +1,7 @@
 import "./LinkCart.css";
 import { Link } from "react-router";
-import { useCartContext } from "/src/contexts/useCartContext.jsx";
-import Cart from "/src/assets/cart.svg";
+import { useCartContext } from "../../contexts/cartContext/useCartContext.js";
+import Cart from "../../assets/cart.svg";
 
 function LinkCart() {
   const { cartItemsCount } = useCartContext();

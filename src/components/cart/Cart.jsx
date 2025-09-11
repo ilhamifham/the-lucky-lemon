@@ -1,10 +1,10 @@
 import "./Cart.css";
 import EmptyCart from "./EmptyCart.jsx";
-import { useCartContext } from "/src/contexts/useCartContext.jsx";
+import { useCartContext } from "../../contexts/cartContext/useCartContext.js";
 import CartItem from "./CartItem.jsx";
 
 function Cart() {
-  const { cartItems, cartItemsPrice, cartItemsCount } = useCartContext();
+  const { cartItems, cartItemsPrice, cartItemsCount, changeQuantity, deleteCartItem } = useCartContext();
   const textCenterStyle = {
     textAlign: "center",
   };
@@ -16,7 +16,7 @@ function Cart() {
         <div>
           <ul>
             {cartItems.map((item, index) => {
-              return <CartItem key={index} item={item} />;
+              return <CartItem key={index} item={item} changeQuantity={changeQuantity} deleteCartItem={deleteCartItem} />;
             })}
           </ul>
           <div className="cart__total">
