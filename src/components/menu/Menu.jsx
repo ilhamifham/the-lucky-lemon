@@ -14,9 +14,9 @@ function Menu() {
       <div>
         <h2>Our Main Meals</h2>
         <ul ref={scrollRef} className="scroll-container">
-          {menuItems.map((menuItem, index) => {
-            const currentMenuItem = cartItems.find((cartItem) => cartItem.title === menuItem.title) || null;
-            return <ListItem key={index} item={menuItem} currentMenuItem={currentMenuItem} addToCart={addToCart} removeFromCart={removeFromCart} />;
+          {menuItems.map((menuItem) => {
+            const currentMenuItem = cartItems.find((cartItem) => cartItem.id === menuItem.id) || null;
+            return <ListItem key={menuItem.id} item={menuItem} currentMenuItem={currentMenuItem} addToCart={addToCart} removeFromCart={removeFromCart} />;
           })}
         </ul>
         <div className="scroll-buttons">

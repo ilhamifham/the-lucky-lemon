@@ -15,8 +15,8 @@ function Cart() {
       {cartItems.length !== 0 ? (
         <div>
           <ul>
-            {cartItems.map((item, index) => {
-              return <CartItem key={index} item={item} changeQuantity={changeQuantity} deleteCartItem={deleteCartItem} />;
+            {cartItems.map((item) => {
+              return <CartItem key={item.id} item={item} changeQuantity={changeQuantity} deleteCartItem={deleteCartItem} />;
             })}
           </ul>
           <div className="cart__total">

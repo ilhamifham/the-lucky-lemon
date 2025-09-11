@@ -10,10 +10,10 @@ export default function CartContextProvider({ children }) {
 
   const addToCart = useCallback((item) => {
     setCartItems((prevCartItems) => {
-      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
+      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.id === item.id);
 
       if (existingCartItem) {
-        return prevCartItems.map((prevCartItem) => (prevCartItem.title === item.title ? { ...prevCartItem, quantity: prevCartItem.quantity + 1 } : prevCartItem));
+        return prevCartItems.map((prevCartItem) => (prevCartItem.id === item.id ? { ...prevCartItem, quantity: prevCartItem.quantity + 1 } : prevCartItem));
       }
 
       return [...prevCartItems, { ...item, quantity: 1 }];
@@ -22,11 +22,11 @@ export default function CartContextProvider({ children }) {
 
   const removeFromCart = useCallback((item) => {
     setCartItems((prevCartItems) => {
-      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
+      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.id === item.id);
 
       if (existingCartItem) {
         return prevCartItems
-          .map((prevCartItem) => (prevCartItem.title === item.title ? { ...prevCartItem, quantity: prevCartItem.quantity - 1 } : prevCartItem))
+          .map((prevCartItem) => (prevCartItem.id === item.id ? { ...prevCartItem, quantity: prevCartItem.quantity - 1 } : prevCartItem))
           .filter((prevCartItem) => prevCartItem.quantity > 0);
       }
 
@@ -36,10 +36,10 @@ export default function CartContextProvider({ children }) {
 
   const changeQuantity = useCallback((item, quantity) => {
     setCartItems((prevCartItems) => {
-      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.title === item.title);
+      const existingCartItem = prevCartItems.find((prevCartItem) => prevCartItem.id === item.id);
 
       if (existingCartItem) {
-        return prevCartItems.map((prevCartItem) => (prevCartItem.title === item.title ? { ...prevCartItem, quantity: parseInt(quantity) } : prevCartItem));
+        return prevCartItems.map((prevCartItem) => (prevCartItem.id === item.id ? { ...prevCartItem, quantity: parseInt(quantity) } : prevCartItem));
       }
 
       return prevCartItems;
@@ -48,7 +48,7 @@ export default function CartContextProvider({ children }) {
 
   const deleteCartItem = useCallback((item) => {
     setCartItems((prevCartItems) => {
-      return prevCartItems.filter((prevCartItem) => prevCartItem.title !== item.title);
+      return prevCartItems.filter((prevCartItem) => prevCartItem.id !== item.id);
     });
   }, []);
 

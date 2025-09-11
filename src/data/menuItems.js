@@ -9,6 +9,7 @@ import BeefWEBP from "../assets/beef.webp";
 
 const menuItems = [
   {
+    id: 1,
     title: "Grilled Chicken",
     price: 2200,
     description: "Juicy grilled chicken breast topped with house-made herb butter, roasted carrots, potatoes and seasonal greens.",
@@ -17,6 +18,7 @@ const menuItems = [
     quantity: 0,
   },
   {
+    id: 2,
     title: "Creamy Mushroom",
     price: 1800,
     description: "Arborio rice slow-cooked with a creamy mushroom blend, garlic, white wine, parmesan and fresh herbs mixed well.",
@@ -25,6 +27,7 @@ const menuItems = [
     quantity: 0,
   },
   {
+    id: 3,
     title: "Spicy Shrimp",
     price: 2500,
     description: "Soft corn tortillas filled with grilled spicy shrimp, lime-infused cabbage slaw, avocado crema and cilantro.",
@@ -33,6 +36,7 @@ const menuItems = [
     quantity: 0,
   },
   {
+    id: 4,
     title: "Short Rib Beef",
     price: 3200,
     description: "Slow-braised beef short rib in a red wine reduction, served with garlic mashed potatoes and sautéed asparagus.",
