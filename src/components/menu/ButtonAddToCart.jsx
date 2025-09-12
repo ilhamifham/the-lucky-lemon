@@ -6,16 +6,24 @@ import Minus from "../../assets/minus.svg";
 import Trash from "../../assets/trash.svg";
 
 const ButtonAddToCart = React.memo(({ item, currentMenuItem, addToCart, removeFromCart }) => {
+  function handleAddToCart() {
+    addToCart(item);
+  }
+
+  function handleRemoveCart() {
+    removeFromCart(item);
+  }
+
   return (
     <>
       {currentMenuItem ? (
         <div>
           <div>
-            <button onClick={() => removeFromCart(item)}>
+            <button onClick={handleRemoveCart}>
               {currentMenuItem.quantity === 1 ? <img src={Trash} alt="delete item" width={40} height={40} /> : <img src={Minus} alt="decrease item" width={40} height={40} />}
             </button>
             <div>{currentMenuItem.quantity}</div>
-            <button onClick={() => addToCart(item)} disabled={currentMenuItem.quantity === 10}>
+            <button onClick={handleAddToCart} disabled={currentMenuItem.quantity === 10}>
               <img src={Add} alt="increase item" />
             </button>
           </div>
@@ -24,7 +32,7 @@ const ButtonAddToCart = React.memo(({ item, currentMenuItem, addToCart, removeFr
           </Link>
         </div>
       ) : (
-        <button className="button__ui" onClick={() => addToCart(item)}>
+        <button className="button__ui" onClick={handleAddToCart}>
           Add to Cart
         </button>
       )}
