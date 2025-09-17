@@ -1,9 +1,9 @@
-import React from "react";
+import { memo } from "react";
 import "./CartItem.css";
 import Trash from "../../assets/trash.svg";
 import Chevron from "../ui/Chevron.jsx";
 
-const CartItem = React.memo(({ item, changeQuantity, deleteCartItem }) => {
+const CartItem = memo(({ item, changeQuantity, deleteCartItem }) => {
   function handleQuantity(event) {
     changeQuantity(item, event.target.value);
   }

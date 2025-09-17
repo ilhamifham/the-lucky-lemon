@@ -1,11 +1,11 @@
-import React from "react";
+import { memo } from "react";
 import "./ButtonAddToCart.css";
 import { Link } from "react-router";
 import Add from "../../assets/add.svg";
 import Minus from "../../assets/minus.svg";
 import Trash from "../../assets/trash.svg";
 
-const ButtonAddToCart = React.memo(({ item, currentMenuItem, addToCart, removeFromCart }) => {
+const ButtonAddToCart = memo(({ item, menuItemQuantity, addToCart, removeFromCart }) => {
   function handleAddToCart() {
     addToCart(item);
   }
@@ -16,14 +16,14 @@ const ButtonAddToCart = React.memo(({ item, currentMenuItem, addToCart, removeFr
 
   return (
     <>
-      {currentMenuItem ? (
+      {menuItemQuantity !== 0 ? (
         <div>
           <div>
             <button onClick={handleRemoveCart}>
-              {currentMenuItem.quantity === 1 ? <img src={Trash} alt="delete item" width={40} height={40} /> : <img src={Minus} alt="decrease item" width={40} height={40} />}
+              {menuItemQuantity === 1 ? <img src={Trash} alt="delete item" width={40} height={40} /> : <img src={Minus} alt="decrease item" width={40} height={40} />}
             </button>
-            <div>{currentMenuItem.quantity}</div>
-            <button onClick={handleAddToCart} disabled={currentMenuItem.quantity === 10}>
+            <div>{menuItemQuantity}</div>
+            <button onClick={handleAddToCart} disabled={menuItemQuantity === 10}>
               <img src={Add} alt="increase item" />
             </button>
           </div>

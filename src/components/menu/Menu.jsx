@@ -7,7 +7,7 @@ import { useCartContext } from "../../contexts/cartContext/useCartContext.js";
 
 function Menu() {
   const [scrollRef, scrollRight, scrollLeft] = useScroll();
-  const { cartItems, addToCart, removeFromCart } = useCartContext();
+  const { addToCart, removeFromCart, getCartItemQuantity } = useCartContext();
 
   return (
     <section className="section__menu">
@@ -15,8 +15,8 @@ function Menu() {
         <h2>Our Main Meals</h2>
         <ul ref={scrollRef} className="scroll-container">
           {menuItems.map((menuItem) => {
-            const currentMenuItem = cartItems.find((cartItem) => cartItem.id === menuItem.id) || null;
-            return <ListItem key={menuItem.id} item={menuItem} currentMenuItem={currentMenuItem} addToCart={addToCart} removeFromCart={removeFromCart} />;
+            const menuItemQuantity = getCartItemQuantity(menuItem);
+            return <ListItem key={menuItem.id} item={menuItem} menuItemQuantity={menuItemQuantity} addToCart={addToCart} removeFromCart={removeFromCart} />;
           })}
         </ul>
         <div className="scroll-buttons">
