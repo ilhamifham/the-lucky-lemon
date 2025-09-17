@@ -1,16 +1,23 @@
 import { useRef } from "react";
 
 export function useScroll() {
-    const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
-    function scrollRight() {
-        scrollRef.current.scrollBy({ left: Math.min(320, (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth) - scrollRef.current?.scrollLeft), top: 0, behavior: "smooth" })
-    }
+  function scrollRight() {
+    const element = scrollRef.current;
 
-    function scrollLeft() {
-        scrollRef.current.scrollBy({ left: -Math.min(320, scrollRef.current?.scrollLeft), top: 0, behavior: "smooth" })
-    }
+    if (!element) return;
 
-    return [scrollRef, scrollRight, scrollLeft];
+    element.scrollBy({ left: Math.min(320, element.scrollWidth - element.clientWidth - element.scrollLeft), top: 0, behavior: "smooth" });
+  }
 
+  function scrollLeft() {
+    const element = scrollRef.current;
+
+    if (!element) return;
+
+    element.scrollBy({ left: -Math.min(320, element.scrollLeft), top: 0, behavior: "smooth" });
+  }
+
+  return [scrollRef, scrollRight, scrollLeft];
 }
